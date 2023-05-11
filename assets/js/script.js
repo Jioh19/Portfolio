@@ -17,11 +17,19 @@ window.onmousemove = (e) => {
 	// nextPercentage = Math.min(nextPercentage, 0);
 	// nextPercentage = Math.max(nextPercentage, -100);
 	carrusel.dataset.percentage = nextPercentage;
-	carrusel.style.transform = `translate(${nextPercentage}%, -50%)`;
+
+    carrusel.animate({
+        transform: `translate(${nextPercentage}%, -50%)`
+    }, {duration: 1200, fill:"forwards"});
+
+	//carrusel.style.transform = `translate(${nextPercentage}%, -50%)`;
 
     for (const image of carrusel.getElementsByClassName("image")) {
-		image.style.objectPosition = `${nextPercentage/2 + 100}% 50%`;
-		console.log(image);
+        image.animate({
+            objectPosition: `${100+nextPercentage/2}% center`
+        }, {duration:1200, fill: "forwards"});
+	//	image.style.objectPosition = `${nextPercentage/2 + 100}% 50%`;
+	//	console.log(image);
 	}
 
 };
