@@ -123,7 +123,7 @@ html {
 }
 
 #experiencias {
-    background: var(--background-color);
+    background-image: url(../img/home2.jpg)
 }
 
 #trabajos {
@@ -292,15 +292,13 @@ html {
 	object-fit: cover;
 	object-position: 100% 50%;
 	border-radius: 10px;
-	border: lightslategray solid 2px;
+	border: var(--hover-color) solid 2px;
 }
 
 .carrusel {
 	display: flex;
 	gap: 4vmin;
 	position: relativee;
-	/* left: 50%;
-	top: 50%; */
 	transform: translate(13%, 0%);
 }
 
