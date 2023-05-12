@@ -74,19 +74,124 @@ h6 {
 body {
 	overflow-x: hidden;
 	height: 100%;
-	background-image: url("../img/stimpank-oboi-chasy-stil.jpg");
+	background-color: rgb(30,30, 90);
 	background-attachment: fixed;
 }
 html {
 	color-scheme: light dark;
 }
 
-#introduccion, #resumen, #experiencias, #contactame {
-	padding: 10rem 5rem;
-	margin: 5rem;
-	color: white;
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: var(--background-transparency);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
 }
 
+.logo {
+    font-size: 25px;
+    color: var(--font-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar a{
+    font-size: 18px;
+    color: var(--font-color);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: 0.3s
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--hover-color);
+}
+
+.home-content, #resumen, #experiencias, #contactame {
+	color: var(--font-color);
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.home-content{
+    max-width: 600px;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--hover-color);
+}
+
+.home-content p {
+    margin: 20px 0 40px;
+}
+
+.home-content .btn-box {
+    display: flex;
+    justify-content: space-between;
+    width: 340px;
+    height: 50px;
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: var(--hover-color);
+    border: 2px solid var(--hover-color);
+    border-radius: 8px;
+    font-size: 19px;
+    color: var(--font-color);
+    text-decoration: none;
+    font-weight: 00;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: var(--hover-color);
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: red;
+    z-index: -1;
+    transition: 0.3s
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
 .image {
 	width: 40vmin;
 	height: 56vmin;
