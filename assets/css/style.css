@@ -123,7 +123,7 @@ html {
 }
 
 #experiencias {
-    background-image: url(../img/experiencias.jpg);
+    background: var(--background-color);
 }
 
 #trabajos {
