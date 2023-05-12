@@ -122,9 +122,10 @@ html {
 .home {
     height: 100vh;
     display: flex;
-    background-image: url(../img/home-background.jpg);
-    background-repeat: no-repeat;
-
+    background-image: url(../img/home1.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
     align-items: center;
     padding: 0 10%;
 }
@@ -251,6 +252,21 @@ html {
 
 .home-sci a:hover::before {
     height: 100%;
+}
+
+.home-imgHover {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    width: 500px;
+    height: 100%;
+    background: transparent;
+    transition: 3s;
+}
+
+.home-imgHover:hover {
+    background: var(--background-color);
+    opacity: 0.95;
 }
 
 .image {
