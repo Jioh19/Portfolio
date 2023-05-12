@@ -72,7 +72,10 @@ h6 {
 }
 
 body {
-    overflow: hidden;
+    overflow-x: hidden;
+    height: 100%;
+    background-image: url("../img/stimpank-oboi-chasy-stil.jpg");
+    background-attachment: fixed;
 }
 html {
 	color-scheme: light dark;
@@ -83,13 +86,22 @@ html {
 	height: 56vmin;
 	object-fit: cover;
     object-position: 100% 50%;
+    border-radius: 10px;
+    border: lightslategray solid 2px;
 }
 
 .carrusel {
 	display: flex;
 	gap: 4vmin;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(0%, -50%);
+	position: relativee;
+	/* left: 50%;
+	top: 50%; */
+	transform: translate(13%, 0%); 
+    
+}
+
+h2 {
+    color: white;
+    text-shadow: lightslategray 3px 3px 3px;
+    text-align: center;
 }
