@@ -72,31 +72,28 @@ h6 {
 }
 
 body {
-    overflow-x: hidden;
-    height: 100%;
-    background-image: url("../img/stimpank-oboi-chasy-stil.jpg");
-    background-attachment: fixed;
+	overflow-x: hidden;
+	height: 100%;
+	background-image: url("../img/stimpank-oboi-chasy-stil.jpg");
+	background-attachment: fixed;
 }
 html {
 	color-scheme: light dark;
 }
 
-article {
-    border: red solid 2px;
-}
-#introduccion {
-    padding: 10rem 5rem;
-    margin: 5rem;
-    color: white;
+#introduccion, #resumen, #experiencias, #contactame {
+	padding: 10rem 5rem;
+	margin: 5rem;
+	color: white;
 }
 
 .image {
 	width: 40vmin;
 	height: 56vmin;
 	object-fit: cover;
-    object-position: 100% 50%;
-    border-radius: 10px;
-    border: lightslategray solid 2px;
+	object-position: 100% 50%;
+	border-radius: 10px;
+	border: lightslategray solid 2px;
 }
 
 .carrusel {
@@ -105,12 +102,11 @@ article {
 	position: relativee;
 	/* left: 50%;
 	top: 50%; */
-	transform: translate(13%, 0%); 
-    
+	transform: translate(13%, 0%);
 }
 
 h2 {
-    color: white;
-    text-shadow: lightslategray 3px 3px 3px;
-    text-align: center;
+	color: white;
+	text-shadow: lightslategray 3px 3px 3px;
+	text-align: center;
 }
