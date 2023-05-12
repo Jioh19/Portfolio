@@ -170,11 +170,24 @@ html {
     letter-spacing: 1px;
     z-index: 1;
     overflow: hidden;
+    transition: 0.3s;
+}
+
+.btn-box a:hover{
+    color: var(--hover-color); 
 }
 
 .btn-box a:nth-child(2) {
     background: transparent;
     color: var(--hover-color);
+}
+
+.btn-box a:nth-child(2):hover {
+    color: var(--font-color);
+}
+
+.btn-box a:nth-child(2)::before {
+    background: var(--hover-color);
 }
 
 .btn-box a::before {
@@ -184,13 +197,33 @@ html {
     left: 0;
     width: 0;
     height: 100%;
-    background: red;
+    background: var(--background-color);
     z-index: -1;
     transition: 0.3s
 }
 
 .btn-box a:hover::before {
     width: 100%;
+}
+
+.home-sci {
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+
+}
+
+.home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: var(--hover-color) solid 2px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--hover-color);
 }
 .image {
 	width: 40vmin;
