@@ -115,8 +115,25 @@ html {
     color: var(--hover-color);
 }
 
-.home-content, #resumen, #experiencias, #contactame {
+
+#experiencias, #contactame {
+    height: 100vh;
 	color: var(--font-color);
+    padding: 90px 10%;
+}
+
+#experiencias {
+    background-image: url(../img/experiencias.jpg);
+}
+
+#trabajos {
+    height: 100vh;
+    padding: 90px 0;
+    background-image: url(../img/trabajos.jpg);
+}
+
+#contactame {
+    background-image: url(../img/home-background.jpg)
 }
 
 .home {
@@ -261,7 +278,7 @@ html {
     width: 40%;
     height: 100%;
     background: transparent;
-    transition: 3s;
+    transition: 1.5s;
 }
 
 .home-imgHover:hover {
@@ -289,6 +306,5 @@ html {
 
 h2 {
 	color: white;
-	text-shadow: lightslategray 3px 3px 3px;
 	text-align: center;
 }
