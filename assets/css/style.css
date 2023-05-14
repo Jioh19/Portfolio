@@ -329,27 +329,25 @@ html {
 
 #wrapper i {
 	text-align: center;
-	height: 3rem;
-	width: 3rem;
-	line-height: 3rem;
-	font-size: 2rem;
-	position: relative;
-	background: white;
+	padding: 0.25rem;
 	border-radius: 50%;
-	color: var(--background-color);
+	font-size: 2rem;
+	background: var(--background-color);
+	position: relative;
+	color: white;
 	z-index: 100;
 }
 
 #wrapper i:first-child {
 	position: absolute;
-	border: var(--background-color) solid 2px;
-	left: clamp(0px, 10vw, 400px);
+	border: white solid 2px;
+	left: clamp(0px, 7vw, 400px);
 }
 
 #wrapper i:last-child {
 	position: absolute;
-	border: var(--background-color) solid 2px;
-	right: clamp(0px, 10vw, 400px);
+	border: white solid 2px;
+	right: clamp(0px, 7vw, 400px);
 }
 
 /* Fin Carrusel */
