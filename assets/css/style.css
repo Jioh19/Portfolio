@@ -72,7 +72,7 @@ h6 {
 }
 
 body {
-	overflow-x: hidden;
+
 	height: 100%;
 	background-color: rgb(30, 30, 90);
 	background-attachment: fixed;
@@ -93,7 +93,7 @@ html {
 	align-items: center;
 	z-index: 100;
 }
-
+/* Inicio Navbar */
 .logo {
 	font-size: 25px;
 	color: var(--font-color);
@@ -114,6 +114,8 @@ html {
 .navbar a.active {
 	color: var(--hover-color);
 }
+
+/* Fin del Navbar */
 
 #experiencias,
 #contactame {
@@ -136,6 +138,7 @@ html {
 	background-image: url(../img/home-background.jpg);
 }
 
+/* Hoja Home */
 .home {
 	height: 100vh;
 	display: flex;
@@ -293,21 +296,67 @@ html {
 	opacity: 0.95;
 }
 
-.image {
-	width: 40vmin;
-	height: 56vmin;
+/* Fin Hoja home */
+
+/* Inicio Carrusel */
+.carrusel .image {
+	height: 50vh;
 	object-fit: cover;
-	object-position: 100% 50%;
+	width: 20vw;
 	border-radius: 10px;
 	border: var(--hover-color) solid 2px;
 }
 
 .carrusel {
 	display: flex;
-	gap: 4vmin;
+	gap: 2vmin;
+	width: 100%;
+	margin: 2rem;
+	justify-content: center;
 	position: relative;
-	transform: translate(13%, 0%);
+	left: 50%;
 }
+
+#wrapper {
+	margin: auto;
+	max-width: min(90%, 1400px);
+	overflow:hidden;
+	display: flex;
+	border:red solid 2px;
+	align-items: center;
+}
+
+#wrapper .carrusel {
+	white-space: nowrap;
+}
+
+#wrapper i {
+	text-align: center;
+	height: 3rem;
+	width: 3rem;
+	line-height: 3rem;
+	font-size: 2rem;
+	position: relative;
+	background: white;
+	border-radius: 50%;
+	color:  var(--background-color);
+	z-index: 100;
+	
+}
+
+#wrapper i:first-child {
+	position: absolute;
+	border: var(--background-color) solid 2px;
+	left: 0px;
+}
+
+#wrapper i:last-child {
+	position: absolute;
+	border: var(--background-color) solid 2px;
+	right: 0px;
+}
+
+/* Fin Carrusel */
 
 h2 {
 	color: white;
