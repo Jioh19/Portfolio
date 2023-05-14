@@ -37,3 +37,11 @@ window.onmouseup = () => {
 	carrusel.dataset.mouseDownAt = "0";
 	carrusel.dataset.prevPercentage = carrusel.dataset.percentage;
 };
+
+function checkbox() {
+	if(event.target.checked) {
+		document.querySelector(".hamburger-item").style.display = "block";
+	} else {
+		document.querySelector(".hamburger-item").style.display = "none";
+	}
+}

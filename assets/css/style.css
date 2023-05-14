@@ -74,7 +74,7 @@ h6 {
 body {
 	overflow-x: hidden;
 	height: 100%;
-	background-color: rgb(30,30, 90);
+	background-color: rgb(30, 30, 90);
 	background-attachment: fixed;
 }
 html {
@@ -82,208 +82,215 @@ html {
 }
 
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 10%;
-    background: var(--background-transparency);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px 10%;
+	background: var(--background-transparency);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 100;
 }
 
 .logo {
-    font-size: 25px;
-    color: var(--font-color);
-    text-decoration: none;
-    font-weight: 600;
+	font-size: 25px;
+	color: var(--font-color);
+	text-decoration: none;
+	font-weight: 600;
 }
 
-.navbar a{
-    font-size: 18px;
-    color: var(--font-color);
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 35px;
-    transition: 0.3s
+.navbar a {
+	font-size: 18px;
+	color: var(--font-color);
+	text-decoration: none;
+	font-weight: 500;
+	margin-left: 35px;
+	transition: 0.3s;
 }
 
 .navbar a:hover,
 .navbar a.active {
-    color: var(--hover-color);
+	color: var(--hover-color);
 }
 
-
-#experiencias, #contactame {
-    height: 100vh;
+#experiencias,
+#contactame {
+	height: 100vh;
 	color: var(--font-color);
-    padding: 90px 10%;
+	padding: 90px 10%;
 }
 
 #experiencias {
-    background-image: url(../img/home2.jpg)
+	background-image: url(../img/home2.jpg);
 }
 
 #trabajos {
-    height: 100vh;
-    padding: 90px 0;
-    background-image: url(../img/trabajos.jpg);
+	height: 100vh;
+	padding: 90px 0;
+	background-image: url(../img/trabajos.jpg);
 }
 
 #contactame {
-    background-image: url(../img/home-background.jpg)
+	background-image: url(../img/home-background.jpg);
 }
 
 .home {
-    height: 100vh;
-    display: flex;
-    background-image: url(../img/home1.jpg);
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    padding: 0 10%;
+	height: 100vh;
+	display: flex;
+	background-image: url(../img/home1.jpg);
+	background-size: cover;
+	background-position: center;
+    flex-wrap: wrap;
+	align-items: center;
+	padding: 0 10%;
 }
 
-.home-content{
-    max-width: 600px;
+.home-content {
+	max-width: 600px;
 }
 
 .home-content h1 {
-    font-size: 56px;
-    font-weight: 700;
-    line-height: 1.2;
+	font-size: 56px;
+	font-weight: 700;
+	line-height: 1.2;
 }
 
 .home-content h3 {
-    font-size: 32px;
-    font-weight: 700;
-    color: var(--hover-color);
+	font-size: 32px;
+	font-weight: 700;
+	color: var(--hover-color);
 }
 
 .home-content p {
-    margin: 20px 0 40px;
+	margin: 20px 0 40px;
 }
 
 .home-content .btn-box {
-    display: flex;
-    justify-content: space-between;
-    width: 340px;
-    height: 50px;
+	display: flex;
+	justify-content: space-between;
+	width: min(90%, 340px);
+	height: 50px;
 }
 
 .btn-box a {
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-    height: 100%;
-    background: var(--hover-color);
-    border: 2px solid var(--hover-color);
-    border-radius: 8px;
-    font-size: 19px;
-    color: var(--font-color);
-    text-decoration: none;
-    font-weight: 00;
-    letter-spacing: 1px;
-    z-index: 1;
-    overflow: hidden;
-    transition: 0.3s;
+	position: relative;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 150px;
+	height: 100%;
+	background: var(--hover-color);
+	border: 2px solid var(--hover-color);
+	border-radius: 8px;
+	font-size: 19px;
+	color: var(--font-color);
+	text-decoration: none;
+	font-weight: 00;
+	letter-spacing: 1px;
+	z-index: 1;
+	overflow: hidden;
+	transition: 0.3s;
 }
 
-.btn-box a:hover{
-    color: var(--hover-color); 
+.btn-box a:hover {
+	color: var(--hover-color);
 }
 
 .btn-box a:nth-child(2) {
-    background: transparent;
-    color: var(--hover-color);
+	background: transparent;
+	color: var(--hover-color);
 }
 
 .btn-box a:nth-child(2):hover {
-    color: var(--font-color);
+	color: var(--font-color);
 }
 
 .btn-box a:nth-child(2)::before {
-    background: var(--hover-color);
+	background: var(--hover-color);
 }
 
 .btn-box a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: var(--background-color);
-    z-index: -1;
-    transition: 0.3s
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	background: var(--background-color);
+	z-index: -1;
+	transition: 0.3s;
 }
 
 .btn-box a:hover::before {
-    width: 100%;
+	width: 100%;
 }
 
+.container-home-sci {
+    width: 90vw;
+}
+
+
 .home-sci {
-    position: absolute;
-    bottom: 40px;
-    width: 170px;
-    display: flex;
-    justify-content: space-between;
+
+    margin-block: 0.5rem;
+	bottom: 40px;
+	width: 170px;
+	display: flex;
+	justify-content: space-between;
 }
 
 .home-sci a {
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    background: transparent;
-    border: var(--hover-color) solid 2px;
-    border-radius: 50%;
-    font-size: 20px;
-    color: var(--hover-color);
-    z-index: 1;
-    overflow: hidden;
+	position: relative;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+	height: 40px;
+	background: transparent;
+	border: var(--hover-color) solid 2px;
+	border-radius: 50%;
+	font-size: 20px;
+	color: var(--hover-color);
+	z-index: 1;
+	overflow: hidden;
 }
 
 .home-sci a:hover {
-    color: var(--background-color);
+	color: var(--background-color);
 }
 
 .home-sci a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 0;
-    z-index: -1;
-    transition: 0.3s;
-    background: var(--hover-color);
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 0;
+	z-index: -1;
+	transition: 0.3s;
+	background: var(--hover-color);
 }
 
 .home-sci a:hover::before {
-    height: 100%;
+	height: 100%;
 }
 
 .home-imgHover {
-    position: absolute;
-    top: 0;
-    right: 30px;
-    width: 40%;
-    height: 100%;
-    background: transparent;
-    transition: 1.5s;
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 30px;
+	width: 40%;
+	height: 100%;
+	background: transparent;
+	transition: 1.5s;
 }
 
 .home-imgHover:hover {
-    background: var(--background-color);
-    opacity: 0.95;
+	background: var(--background-color);
+	opacity: 0.95;
 }
 
 .image {
@@ -298,11 +305,136 @@ html {
 .carrusel {
 	display: flex;
 	gap: 4vmin;
-	position: relativee;
+	position: relative;
 	transform: translate(13%, 0%);
 }
 
 h2 {
 	color: white;
 	text-align: center;
+}
+
+/** Menu Hamburguesa */
+label .menu {
+	position: absolute;
+	right: -75px;
+	top: -75px;
+	z-index: 100;
+	width: 150px;
+	height: 150px;
+	background: var(--hamburger-transparency);
+	border-radius: 50% 50% 50% 50%;
+	-webkit-transition: 0.5s ease-in-out;
+	transition: 0.5s ease-in-out;
+	box-shadow: 0 0 0 0 var(--hamburger-transparency), 0 0 0 0 var(--hamburger-transparency);
+	cursor: pointer;
+}
+
+label .hamburger {
+	position: absolute;
+	top: 105px;
+	left: 30px;
+	width: 30px;
+	height: 2px;
+	background: var(--hover-color);
+	display: block;
+	-webkit-transform-origin: center;
+	transform-origin: center;
+	-webkit-transition: 0.5s ease-in-out;
+	transition: 0.5s ease-in-out;
+}
+
+label .hamburger:after,
+label .hamburger:before {
+	-webkit-transition: 0.5s ease-in-out;
+	transition: 0.5s ease-in-out;
+	content: "";
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: var(--hover-color);
+}
+
+label .hamburger:before {
+	top: -10px;
+}
+
+label .hamburger:after {
+	bottom: -10px;
+}
+
+label input {
+	display: none;
+}
+
+label input:checked + .menu {
+	box-shadow: 0 0 0 100vw var(--hamburger-transparency), 0 0 0 100vh var(--hamburger-transparency);
+	border-radius: 0;
+}
+
+label input:checked + .menu .hamburger {
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+label input:checked + .menu .hamburger:after {
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+	bottom: 0;
+}
+
+label input:checked + .menu .hamburger:before {
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+	top: 0;
+}
+
+label input:checked + .menu + ul {
+	opacity: 1;
+}
+
+label ul {
+	z-index: 200;
+	position: absolute;
+	top: 150%;
+	left: 50%;
+	font-size: 1.5rem;
+	transform: translate(-50%, 0%);
+	opacity: 0;
+	transition: 0.25s 0s ease-in-out;
+}
+
+label a {
+	margin-block: 3rem 1rem;
+
+	display: block;
+	color: var(--hover-color);
+	text-decoration: none;
+}
+
+/** Fin menu hamburguesa/*
+
+
+/** Media queries */
+
+@media (min-width: 1200px) {
+	.home-imgHover {
+		display: block;
+	}
+}
+
+@media (min-width: 800px) {
+	.navbtn {
+		display: none;
+	}
+}
+
+@media (max-width: 800px) {
+	.navbar {
+		display: none;
+	}
+    .hamburger-item {
+        display: none;
+    }
 }
