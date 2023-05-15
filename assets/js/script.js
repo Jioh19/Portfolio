@@ -2,41 +2,6 @@ const carrusel = document.querySelector(".carrusel"),
 	firstImg = carrusel.querySelectorAll("img")[0],
 	arrowIcons = document.querySelectorAll("#wrapper i");
 
-// let isDragStart = false,
-// 	prevPageX,
-// 	prevScrollLeft;
-
-// const dragStart = (e) => {
-// 	isDragStart = true;
-// 	prevPageX = e.pageX;
-// 	prevScrollLeft = carrusel.scrollLeft;
-// };
-
-// const dragging = (e) => {
-// 	if (!isDragStart) return;
-// 	e.preventDefault();
-// 	let positionDiff = e.pageX - prevPageX;
-// 	carrusel.scrollLeft = prevScrollLeft - positionDiff;
-
-// 	for (const image of carrusel.getElementsByClassName("image")) {
-// 		image.animate(
-// 			{
-// 				objectPosition: `${positionDiff *100 / carrusel.scrollWidth}% center`,
-// 			},
-// 			{ duration: 1200, fill: "forwards" }
-// 		);
-// 	}
-
-// 	console.log(positionDiff *100/ carrusel.scrollWidth);
-// };
-
-// const dragStop = () => {
-// 	isDragStart = false;
-// };
-
-// carrusel.addEventListener("mousedown", dragStart);
-// carrusel.addEventListener("mousemove", dragging);
-// carrusel.addEventListener("mouseup", dragStop);
 
 let firstImgWidth = firstImg.clientWidth;
 
@@ -59,7 +24,7 @@ arrowIcons.forEach((icon) => {
 			{
 				transform: `translate(${nextPercentage + 50}%, 0%)`,
 			},
-			{ duration: 1200, fill: "forwards" }
+			{ duration: 250, fill: "forwards" }
 		);
 
 		for (const image of carrusel.getElementsByClassName("image")) {
@@ -67,7 +32,7 @@ arrowIcons.forEach((icon) => {
 				{
 					objectPosition: `${100 + nextPercentage}% center`,
 				},
-				{ duration: 1200, fill: "forwards" }
+				{ duration: 250, fill: "forwards" }
 			);
 		}
 	});

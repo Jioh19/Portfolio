@@ -299,7 +299,7 @@ html {
 .carrusel .image {
 	object-fit: cover;
 	height: 50vh;
-	aspect-ratio: 4/7;
+	aspect-ratio: 5/8;
 	border-radius: 10px;
 	object-position: 100% center;
 	border: var(--hover-color) solid 2px;
