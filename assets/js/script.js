@@ -1,5 +1,41 @@
 const carrusel = document.querySelector(".carrusel");
 
+// let isDragStart = false,
+// 	prevPageX,
+// 	prevScrollLeft;
+
+// const dragStart = (e) => {
+// 	isDragStart = true;
+// 	prevPageX = e.pageX;
+// 	prevScrollLeft = carrusel.scrollLeft;
+// };
+
+// const dragging = (e) => {
+// 	if (!isDragStart) return;
+// 	e.preventDefault();
+// 	let positionDiff = e.pageX - prevPageX;
+// 	carrusel.scrollLeft = prevScrollLeft - positionDiff;
+
+// 	for (const image of carrusel.getElementsByClassName("image")) {
+// 		image.animate(
+// 			{
+// 				objectPosition: `${positionDiff *100 / carrusel.scrollWidth}% center`,
+// 			},
+// 			{ duration: 1200, fill: "forwards" }
+// 		);
+// 	}
+
+// 	console.log(positionDiff *100/ carrusel.scrollWidth);
+// };
+
+// const dragStop = () => {
+// 	isDragStart = false;
+// };
+
+// carrusel.addEventListener("mousedown", dragStart);
+// carrusel.addEventListener("mousemove", dragging);
+// carrusel.addEventListener("mouseup", dragStop);
+
 carrusel.onmousedown = (e) => {
 	carrusel.dataset.mouseDownAt = e.clientX;
 };
@@ -18,7 +54,7 @@ carrusel.onmousemove = (e) => {
 
 	carrusel.animate(
 		{
-			transform: `translate(${nextPercentage  + 13}%, 0%)`,
+			transform: `translate(${nextPercentage + 50}%, 0%)`,
 		},
 		{ duration: 1200, fill: "forwards" }
 	);
@@ -39,7 +75,7 @@ window.onmouseup = () => {
 };
 
 function checkbox() {
-	if(event.target.checked) {
+	if (event.target.checked) {
 		document.querySelector(".hamburger-item").style.display = "block";
 	} else {
 		document.querySelector(".hamburger-item").style.display = "none";

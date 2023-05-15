@@ -306,28 +306,34 @@ html {
 
 .carrusel {
 	display: flex;
+
 	gap: 2vmin;
-	width: 100%;
 	margin: 2rem;
 	justify-content: center;
-	position: relative;
-	left: 50%;
+	left: 150%;
 }
 
 #wrapper {
 	margin: 2rem auto;
 	max-width: min(90%, 1400px);
-	overflow: hidden;
+	overflow-inline: hidden;
 	display: flex;
-
 	align-items: center;
+	border: var(--hover-color) solid 3px;
+	border-radius: 10px;
+	background: var(--background-color);
 }
 
 #wrapper .carrusel {
 	white-space: nowrap;
+	font-size: 0px;
+	cursor: pointer;
+
 }
 
 #wrapper i {
+	display: none;
+
 	text-align: center;
 	padding: 0.25rem;
 	border-radius: 50%;
@@ -464,6 +470,9 @@ label a {
 @media (min-width: 1200px) {
 	.home-imgHover {
 		display: block;
+	}
+	.navbtn {
+		display: none;
 	}
 }
 
