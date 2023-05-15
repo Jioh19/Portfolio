@@ -297,9 +297,9 @@ html {
 
 /* Inicio Carrusel */
 .carrusel .image {
-	height: 50vh;
 	object-fit: cover;
-	width: 20vw;
+	height: 50vh;
+	aspect-ratio: 4/7;
 	border-radius: 10px;
 	object-position: 100% center;
 	border: var(--hover-color) solid 2px;
@@ -317,7 +317,7 @@ html {
 
 #wrapper {
 	margin: 2rem auto;
-	max-width: min(90%, 1400px);
+	max-width: min(90%, 1800px);
 	overflow: hidden;
 	display: flex;
 	align-items: center;
@@ -330,12 +330,9 @@ html {
 	white-space: nowrap;
 	font-size: 0px;
 	cursor: pointer;
-
 }
 
 #wrapper i {
-	display: none;
-
 	text-align: center;
 	padding: 0.25rem;
 	border-radius: 50%;
@@ -344,6 +341,7 @@ html {
 	position: relative;
 	color: white;
 	z-index: 100;
+	cursor: pointer;
 }
 
 #wrapper i:first-child {
@@ -482,9 +480,9 @@ label a {
 	.navbtn {
 		display: none;
 	}
-	.carrusel .image {
+	/* .carrusel .image {
 		width: 30vw;
-	}
+	} */
 }
 
 @media (max-width: 800px) {
@@ -494,9 +492,9 @@ label a {
 	.hamburger-item {
 		display: none;
 	}
-	.carrusel .image {
+	/* .carrusel .image {
 		width: 40vw;
-	}
+	} */
 }
 
 @media (max-width: 500px) {
@@ -506,7 +504,7 @@ label a {
 	.hamburger-item {
 		display: none;
 	}
-	.carrusel .image {
+	/* .carrusel .image {
 		width: 60vw;
-	}
+	} */
 }

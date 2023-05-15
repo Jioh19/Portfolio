@@ -1,4 +1,6 @@
-const carrusel = document.querySelector(".carrusel");
+const carrusel = document.querySelector(".carrusel"),
+	firstImg = carrusel.querySelectorAll("img")[0],
+	arrowIcons = document.querySelectorAll("#wrapper i");
 
 // let isDragStart = false,
 // 	prevPageX,
@@ -36,6 +38,41 @@ const carrusel = document.querySelector(".carrusel");
 // carrusel.addEventListener("mousemove", dragging);
 // carrusel.addEventListener("mouseup", dragStop);
 
+let firstImgWidth = firstImg.clientWidth;
+
+arrowIcons.forEach((icon) => {
+	icon.addEventListener("click", () => {
+		let percentage;
+		icon.id == "right" ? (percentage = 0.1 * -100) : (percentage = 0.1 * 100);
+		nextPercentage = parseFloat(carrusel.dataset.prevPercentage) + percentage;
+		if (isNaN(nextPercentage)) {
+			nextPercentage = 0;
+		}
+
+		nextPercentage = Math.min(nextPercentage, 0);
+		nextPercentage = Math.max(nextPercentage, -100);
+
+		if (nextPercentage == NaN) nextPercentage = -50;
+		carrusel.dataset.percentage = nextPercentage;
+
+		carrusel.animate(
+			{
+				transform: `translate(${nextPercentage + 50}%, 0%)`,
+			},
+			{ duration: 1200, fill: "forwards" }
+		);
+
+		for (const image of carrusel.getElementsByClassName("image")) {
+			image.animate(
+				{
+					objectPosition: `${100 + nextPercentage}% center`,
+				},
+				{ duration: 1200, fill: "forwards" }
+			);
+		}
+	});
+});
+
 carrusel.onmousedown = (e) => {
 	carrusel.dataset.mouseDownAt = e.clientX;
 };
@@ -46,11 +83,16 @@ carrusel.onmousemove = (e) => {
 	const mouseDelta = parseFloat(carrusel.dataset.mouseDownAt) - e.clientX,
 		maxDelta = window.innerWidth / 2;
 
-	const percentage = (mouseDelta / maxDelta) * -100,
-		nextPercentage = parseFloat(carrusel.dataset.prevPercentage) + percentage;
-	if (nextPercentage < -100) nextPercentage = -100;
-	if (nextPercentage > 0) nextPercentage = 0;
+	const percentage = (mouseDelta / maxDelta) * -100;
+	nextPercentage = parseFloat(carrusel.dataset.prevPercentage) + percentage;
+	nextPercentage = Math.min(nextPercentage, 0);
+	nextPercentage = Math.max(nextPercentage, -100);
+
 	carrusel.dataset.percentage = nextPercentage;
+
+	if (isNaN(nextPercentage)) {
+		nextPercentage = 0;
+	}
 
 	carrusel.animate(
 		{
