@@ -482,7 +482,7 @@ label a {
 
 .item {
 	width: min(90%, 820px);
-	height: 75vh;
+	height: 65vh;
 	border-radius: 20px;
 	box-shadow: 0 0 20px 10px var(--hamburger-transparency);
 	display: grid;
@@ -592,8 +592,8 @@ textarea.input {
 }
 
 .btn {
-	position: relative;
-	top: 100px;
+	position:relative;
+	top: clamp(20px, 12vh,400px);
 	width: 80%;
 	margin: 0 auto;
 	border: var(--font-color) solid 2px;
@@ -641,7 +641,7 @@ textarea.input {
 	.item {
 		display: grid;
 		grid-template-columns: repeat(1, 1fr);
-		height: 80vh;
+		height: 70vh;
 	}
 
 	.contact {
@@ -660,6 +660,12 @@ textarea.input {
 	}
 	.hamburger-item {
 		display: none;
+	}
+
+		.item {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		height: 80vh;
 	}
 	/* .carrusel .image {
 		width: 60vw;
