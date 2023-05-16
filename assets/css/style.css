@@ -611,6 +611,9 @@ textarea.input {
 .btn:hover {
 	background-color: var(--font-color);;
 	color: var(--hover-color);
+	font-size: 20px;
+	letter-spacing: 5px;
+	box-shadow: var(--font-color) 0 0 15px 5px;
 }
 
 
