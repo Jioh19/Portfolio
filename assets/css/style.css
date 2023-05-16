@@ -125,6 +125,9 @@ html {
 
 #experiencias {
 	background-image: url(../img/home2.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: var(--background-color);
 }
 
 #trabajos {
@@ -134,10 +137,9 @@ html {
 }
 
 #contactame {
-	height: 100vh;
 	background-image: url(../img/home-background.jpg);
 	background-size: auto;
-	background-repeat: repeat-y;
+	background-repeat: repeat;
 }
 
 /* Hoja Home */
@@ -239,7 +241,7 @@ html {
 .home-sci {
 	margin-block: 0.5rem;
 	bottom: 40px;
-	width: 170px;
+	width: 220px;
 	display: flex;
 	justify-content: space-between;
 }
@@ -257,6 +259,7 @@ html {
 	font-size: 20px;
 	color: var(--hover-color);
 	z-index: 1;
+	text-decoration: none;
 	overflow: hidden;
 }
 
@@ -474,26 +477,134 @@ label a {
 	height: 100vh;
 	display: flex;
 	justify-content: center;
-	align-items: center;
-	margin: auto;
-	border: red solid 4px;
+	margin: 1rem auto;
 }
 
 .item {
 	width: min(90%, 820px);
 	height: 75vh;
-	background: var(--background-transparency);
 	border-radius: 20px;
 	box-shadow: 0 0 20px 10px var(--hamburger-transparency);
-	overflow: hidden;
 	display: grid;
-	grid-template-columns : repeat(2, 1fr);
-	z-index: 1000;
+	grid-template-columns: repeat(2, 1fr);
 }
 
 .contact {
+	background-image: url(../img/logo.jpg);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: var(--background-color);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem;
+	border-radius: 20px 0px 0px 20px;
+	border: var(--hover-color) solid 3px;
+	transition: 1.5s;
+}
+
+/* .contact-imgHover {
+	width: min(40%, 360px);
+	height: 70%;
+	background: transparent;
+	transition: 1.5s;
+	
+}
+.contact-imgHover:hover {
+	background: var(--background-color);
+	opacity: 0.95;
+	
+} */
+
+.submit-form {
+	border-radius: 0px 20px 20px 0px;
 	background: var(--hover-color);
 }
+
+.first-text {
+	font-size: 2rem;
+	color: var(--hover-color);
+}
+
+.second-text {
+	text-align: center;
+	font-size: 2rem;
+	font-weight: 400;
+	color: var(--font-color);
+}
+
+.submit-form {
+	padding: 1rem;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: max-content;
+}
+.input-box {
+	position: relative;
+	height: 3rem;
+	width: 80%;
+	margin: 1rem auto;
+}
+
+.input {
+	outline: none;
+	border: var(--font-color) solid 2px;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	border-radius: 10px;
+	padding: 0.5rem;
+	font-size: 1rem;
+}
+
+.input-box label {
+	position: absolute;
+	top: 50%;
+	left: 10px;
+	padding-left: 10px;
+	transform: translateY(-50%);
+	font-weight: 500;
+	font-size: 17px;
+	color: var(--font-color);
+	transition: 0.3s;
+}
+
+.input-box .input:focus ~ label,
+.input-box .input:valid ~ label {
+	top: -1px;
+	left: 10px;
+	background: var(--hover-color);
+	font-size: 14px;
+	padding: 5px;
+}
+
+textarea.input {
+	resize: none;
+	min-height: 100px;
+	overflow: auto;
+	padding: 0.5rem;
+}
+
+.btn {
+	position: relative;
+	top: 100px;
+	width: 80%;
+	margin: 0 auto;
+	border: var(--font-color) solid 2px;
+	outline: none;
+	background: var(--font-color);
+	border-radius: 10px;
+	font-size: 1rem;
+	color: var(--hover-color);
+	height: 3rem;
+}
+
 /** Fin página de Contacto*/
 
 /** Media queries */
@@ -526,6 +637,21 @@ label a {
 	/* .carrusel .image {
 		width: 40vw;
 	} */
+
+	.item {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		height: 80vh;
+	}
+
+	.contact {
+		display: none;
+	}
+
+	.submit-form {
+	border-radius: 20px;
+	background: var(--hover-color);
+}
 }
 
 @media (max-width: 500px) {
