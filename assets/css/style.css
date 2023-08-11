@@ -345,27 +345,27 @@ html {
 	font-size: 2rem;
 	background: var(--background-color);
 	position: relative;
-	color: white;
+	color: var(--font-color);
 	z-index: 1;
 	cursor: pointer;
 }
 
 #wrapper i:first-child {
 	position: absolute;
-	border: white solid 2px;
+	border: var(--font-color) solid 2px;
 	left: clamp(0px, 7vw, 400px);
 }
 
 #wrapper i:last-child {
 	position: absolute;
-	border: white solid 2px;
+	border: var(--font-color) solid 2px;
 	right: clamp(0px, 7vw, 400px);
 }
 
 /* Fin Carrusel */
 
 h2 {
-	color: white;
+	color: var(--font-color);
 	text-align: center;
 }
 
@@ -618,7 +618,7 @@ textarea.input {
 }
 
 
-.btn::before {
+/* .btn::before {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -627,12 +627,11 @@ textarea.input {
 	height: 0;
 	z-index: -1;
 	transition: 0.5s;
-	background: red;
 }
 
 .btn:hover::before {
 	height: 100%;
-}
+} */
 
 /** Fin página de Contacto*/
 

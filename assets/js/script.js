@@ -7,7 +7,7 @@ let firstImgWidth = firstImg.clientWidth;
 
 arrowIcons.forEach((icon) => {
 	icon.addEventListener("click", () => {
-		let percentage;
+		let percentage, nextPercentage;
 		icon.id == "right" ? (percentage = 0.2 * -100) : (percentage = 0.2 * 100);
 		nextPercentage = parseFloat(carrusel.dataset.prevPercentage) + percentage;
 		if (isNaN(nextPercentage)) {
@@ -49,6 +49,7 @@ carrusel.onmousemove = (e) => {
 		maxDelta = window.innerWidth / 2;
 
 	const percentage = (mouseDelta / maxDelta) * -100;
+	let nextPercentage;
 	nextPercentage = parseFloat(carrusel.dataset.prevPercentage) + percentage;
 	nextPercentage = Math.min(nextPercentage, 0);
 	nextPercentage = Math.max(nextPercentage, -100);

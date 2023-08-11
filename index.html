@@ -15,7 +15,7 @@
 			<a href="#" class="logo">Jioh19</a>
 
 			<label class="navbtn">
-				<input type="checkbox" onclick="checkbox()" />
+				<input type="checkbox" onclick="checkbox()" placeholder="checkbox" />
 				<span class="menu"> <span class="hamburger"></span> </span>
 				<ul class="hamburger-item">
 					<li><a href="#">HOME</a></li>
@@ -32,8 +32,8 @@
 				<a href="#contactame">CONTACTO</a>
 			</nav>
 		</header>
-		<main>
-			<section class="home">
+		<main class="scroll-container">
+			<section class="home scroll-area">
 				<div class="home-content">
 					<h1>Hola, soy Juan Oh</h1>
 					<h3 class="subtitulo">Desarrollador Full-Stack Javascript</h3>
@@ -50,16 +50,16 @@
 				</div>
 				<div class="container-home-sci">
 					<div class="home-sci">
-						<a href="#"><i class="bx bxl-facebook"></i></a>
-						<a href="#"><i class="bx bxl-github"></i></a>
-						<a href="#"><i class="bx bxl-linkedin"></i></a>
-						<a href="#"><i class="bx bxl-whatsapp"></i></a>
+						<a href="#"><i class="bx bxl-facebook" placeholder="facebook"></i></a>
+						<a href="https://github.com/Jioh19"><i class="bx bxl-github"></i></a>
+						<a href="https://www.linkedin.com/in/jioh19/"><i class="bx bxl-linkedin"></i></a>
+						<a href="https://wa.me/56968987845"><i class="bx bxl-whatsapp"></i></a>
 					</div>
 				</div>
 				<span class="home-imgHover"></span>
 			</section>
 			<article>
-				<section id="experiencias">
+				<section class="scroll-area" id="experiencias">
 					<h2>ÚLTIMAS EXPERIENCIAS LABORALES</h2>
 					<p>
 						"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -70,7 +70,7 @@
 				</section>
 			</article>
 			<article>
-				<section id="trabajos">
+				<section class="scroll-area" id="trabajos">
 					<h2>MIS ÚLTIMOS TRABAJOS</h2>
 					<div id="wrapper">
 						<i class="bx bxs-left-arrow" id="left"></i>
@@ -89,7 +89,7 @@
 				</section>
 			</article>
 			<article>
-				<section id="contactame">
+				<section class="scroll-area" id="contactame">
 					<h2>CONTÁCTAME</h2>
 					<div class="contactoContainer">
 						<div class="item">
@@ -98,9 +98,9 @@
 								<span class="contact-imgHover"></span>
 								<div class="home-sci">
 									<a href="#"><i class="bx bxl-facebook"></i></a>
-									<a href="#"><i class="bx bxl-github"></i></a>
-									<a href="#"><i class="bx bxl-linkedin"></i></a>
-									<a href="#"><i class="bx bxl-whatsapp"></i></a>
+									<a href="https://github.com/Jioh19"><i class="bx bxl-github"></i></a>
+									<a href="https://www.linkedin.com/in/jioh19/"><i class="bx bxl-linkedin"></i></a>
+									<a href="https://wa.me/56968987845"><i class="bx bxl-whatsapp"></i></a>
 								</div>
 							</div>
 							<div class="submit-form">
@@ -108,20 +108,20 @@
 								<form action="">
 									<div>
 										<div class="input-box">
-											<input type="text" class="input" required />
-											<label for="">Nombre</label>
+											<input type="text" class="input" id="nombre" required/>
+											<label for="nombre">Nombre</label>
 										</div>
 										<div class="input-box">
-											<input type="email" class="input" required />
-											<label for="">Email</label>
+											<input type="email" class="input" id="email" required />
+											<label for="email">Email</label>
 										</div>
 										<div class="input-box">
-											<input type="tel" class="input" required />
-											<label for="">Teléfono</label>
+											<input type="tel" class="input" id="tel" required />
+											<label for="tel">Teléfono</label>
 										</div>
 										<div class="input-box">
 											<textarea name="" class="input" required id="message" cols="30" rows="10"></textarea>
-											<label for="">Mensaje</label>
+											<label for="message">Mensaje</label>
 										</div>
 									</div>
 									<input type="submit" class="btn" value="Enviar" />
